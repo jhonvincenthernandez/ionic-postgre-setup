@@ -30,7 +30,6 @@
               label="Name"
               label-placement="stacked"
               placeholder="Enter name"
-              maxlength="100"
             />
           </ion-item>
           <ion-item>
