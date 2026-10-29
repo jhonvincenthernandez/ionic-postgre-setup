@@ -1,0 +1,7 @@
+{
+  "name": "ionic-postgre-setup",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
