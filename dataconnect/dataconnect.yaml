@@ -1,0 +1,13 @@
+specVersion: "v1"
+serviceId: "ionic-postgre-setup-service"
+location: "asia-southeast1"
+schemas:
+  - source: "./schema"
+    datasource:
+      postgresql:
+        database: "ionic-postgre-setup-database"
+        cloudSql:
+          instanceId: "ionic-postgre-setup-instance"
+          # schemaValidation: "STRICT"     # STRICT mode makes Postgres schema match Data Connect exactly.
+          # schemaValidation: "COMPATIBLE" # COMPATIBLE mode makes Postgres schema compatible with Data Connect.
+connectorDirs: ["./example"]

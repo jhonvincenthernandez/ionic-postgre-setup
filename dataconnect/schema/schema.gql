@@ -1,0 +1,6 @@
+type Person @table {
+  id: UUID! @default(expr: "uuidV4()")
+  name: String!
+  age: Int!
+  createdAt: Timestamp! @default(expr: "request.time")
+}

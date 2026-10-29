@@ -1,3 +1,4 @@
+import './firebase';
 import { IonicVue } from '@ionic/vue';
 import { createApp } from 'vue';
 

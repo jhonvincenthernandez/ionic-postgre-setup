@@ -1,0 +1,32 @@
+query ListPeople @auth(
+  level: PUBLIC,
+  insecureReason: "Demo only: anyone can read all name and age records."
+) {
+  people(orderBy: [{ createdAt: DESC }]) {
+    id
+    name
+    age
+    createdAt
+  }
+}
+
+mutation CreatePerson($name: String!, $age: Int!) @auth(
+  level: PUBLIC,
+  insecureReason: "Demo only: anyone can create name and age records."
+) {
+  person_insert(data: { name: $name, age: $age })
+}
+ 
+mutation UpdatePerson($id: UUID!, $name: String!, $age: Int!) @auth(
+  level: PUBLIC,
+  insecureReason: "Demo only: anyone can update name and age records."
+) {
+  person_update(id: $id, data: { name: $name, age: $age })
+}
+ 
+mutation DeletePerson($id: UUID!) @auth(
+  level: PUBLIC,
+  insecureReason: "Demo only: anyone can delete name and age records."
+) {
+  person_delete(id: $id)
+}
